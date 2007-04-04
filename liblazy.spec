@@ -49,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
-%{_pkgconfigdir}/lazy.pc
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/liblazy.h
+%{_pkgconfigdir}/lazy.pc
