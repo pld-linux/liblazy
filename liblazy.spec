@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://people.freedesktop.org/~homac/liblazy/%{name}-%{version}.tar.bz2
 # Source0-md5:	aae2f15bc8cc92f0c66d6c7f397d3048
 URL:		http://freedesktop.org/wiki/Software_2fliblazy
+BuildRequires:	dbus-devel >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
