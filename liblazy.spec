@@ -23,6 +23,18 @@ funkcje do wysyłania komunikatów poprzez demona D-Bus, kolejkowania
 informacji z HAL-a lub odpytywania PolicyKit o uprawnienia. Możliwości
 biblioteki mogą jednak rosnąć w razie potrzeby.
 
+%package static
+Summary:        Static liblazy library
+Summary(pl.UTF-8):      Statyczna bibliotekia liblazy
+Group:          Development/Libraries
+Requires:       %{name}-devel = %{version}-%{release}
+
+%description static
+Static liblazy library.
+
+%description static -l pl.UTF-8
+Statyczna biblioteka liblazy.
+
 %package devel
 Summary:	Header files for liblazy
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liblazy
@@ -39,8 +51,7 @@ Pliki nagłówkowe biblioteki liblazy.
 %setup -q
 
 %build
-%configure \
-	--enable-static=no
+%configure
 %{__make}
 
 %install
@@ -65,3 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/liblazy.h
 %{_pkgconfigdir}/lazy.pc
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/liblazy.a
