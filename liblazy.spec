@@ -1,5 +1,5 @@
 Summary:	Liblazy - D-Bus methods provided for convenience
-Summary(pl.UTF-8):	Liblazy
+Summary(pl.UTF-8):	liblazy - metody D-Bus dla wygody
 Name:		liblazy
 Version:	0.1
 Release:	1
@@ -16,14 +16,23 @@ functions for sending messages over the D-Bus daemon, querying
 information from HAL or asking PolicyKit for a privilege. Its features
 may grow as needed, though.
 
+%description -l pl.UTF-8
+liblazy to prosta i łatwa w użyciu biblioteka udostępniająca wygodne
+funkcje do wysyłania komunikatów poprzez demona D-Bus, kolejkowania
+informacji z HAL-a lub odpytywania PolicyKit o uprawnienia. Możliwości
+biblioteki mogą jednak rosnąć w razie potrzeby.
+
 %package devel
 Summary:	Header files for liblazy
-Summary(pl.UTF-8):	Pliki nagłówkowe dla liblazy
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liblazy
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for liblazy.
+
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki liblazy.
 
 %prep
 %setup -q
