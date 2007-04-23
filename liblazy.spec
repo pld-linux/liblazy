@@ -2,7 +2,7 @@ Summary:	Liblazy - D-Bus methods provided for convenience
 Summary(pl.UTF-8):	liblazy - metody D-Bus dla wygody
 Name:		liblazy
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL v2 / LGPL
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~homac/liblazy/%{name}-%{version}.tar.bz2
@@ -74,6 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/*.la
 %{_includedir}/liblazy.h
 %{_pkgconfigdir}/lazy.pc
 
