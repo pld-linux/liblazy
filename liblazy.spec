@@ -3,12 +3,13 @@ Summary(pl.UTF-8):	liblazy - metody D-Bus dla wygody
 Name:		liblazy
 Version:	0.1
 Release:	2
-License:	GPL v2 / LGPL
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~homac/liblazy/%{name}-%{version}.tar.bz2
 # Source0-md5:	aae2f15bc8cc92f0c66d6c7f397d3048
 URL:		http://freedesktop.org/wiki/Software_2fliblazy
 BuildRequires:	dbus-devel >= 1.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,6 +24,19 @@ funkcje do wysyłania komunikatów poprzez demona D-Bus, kolejkowania
 informacji z HAL-a lub odpytywania PolicyKit o uprawnienia. Możliwości
 biblioteki mogą jednak rosnąć w razie potrzeby.
 
+%package devel
+Summary:	Header files for liblazy
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liblazy
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Requires:	dbus-devel >= 1.0
+
+%description devel
+Header files for liblazy.
+
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki liblazy.
+
 %package static
 Summary:        Static liblazy library
 Summary(pl.UTF-8):      Statyczna bibliotekia liblazy
@@ -34,18 +48,6 @@ Static liblazy library.
 
 %description static -l pl.UTF-8
 Statyczna biblioteka liblazy.
-
-%package devel
-Summary:	Header files for liblazy
-Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liblazy
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-
-%description devel
-Header files for liblazy.
-
-%description devel -l pl.UTF-8
-Pliki nagłówkowe biblioteki liblazy.
 
 %prep
 %setup -q
