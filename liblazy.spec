@@ -38,10 +38,10 @@ Header files for liblazy.
 Pliki nagłówkowe biblioteki liblazy.
 
 %package static
-Summary:        Static liblazy library
-Summary(pl.UTF-8):      Statyczna bibliotekia liblazy
-Group:          Development/Libraries
-Requires:       %{name}-devel = %{version}-%{release}
+Summary:	Static liblazy library
+Summary(pl.UTF-8):	Statyczna bibliotekia liblazy
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static liblazy library.
