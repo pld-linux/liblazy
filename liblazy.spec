@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/liblazy.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -71,13 +74,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.1
+%attr(755,root,root) %{_libdir}/liblazy.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/liblazy.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/liblazy.so
 %{_includedir}/liblazy.h
 %{_pkgconfigdir}/lazy.pc
 
