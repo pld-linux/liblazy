@@ -2,12 +2,12 @@ Summary:	Liblazy - D-Bus methods provided for convenience
 Summary(pl.UTF-8):	liblazy - metody D-Bus dla wygody
 Name:		liblazy
 Version:	0.2
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://people.freedesktop.org/~homac/liblazy/%{name}-%{version}.tar.bz2
+Source0:	https://people.freedesktop.org/~homac/liblazy/%{name}-%{version}.tar.bz2
 # Source0-md5:	d1a91efd155dcd1467c2768447d01e42
-URL:		http://freedesktop.org/wiki/Software_2fliblazy
+URL:		https://freedesktop.org/wiki/Software/liblazy/
 BuildRequires:	dbus-devel >= 1.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
